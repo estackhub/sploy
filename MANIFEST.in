@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include sploy *.css
+recursive-include sploy *.csv
+recursive-include sploy *.html
+recursive-include sploy *.ico
+recursive-include sploy *.js
+recursive-include sploy *.json
+recursive-include sploy *.md
+recursive-include sploy *.png
+recursive-include sploy *.py
+recursive-include sploy *.svg
+recursive-include sploy *.txt
+recursive-exclude sploy *.pyc
