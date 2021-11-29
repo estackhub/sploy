@@ -1,0 +1,199 @@
+{
+ "actions": [],
+ "creation": "2021-11-29 03:55:02.611896",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "company",
+  "space",
+  "users_limit",
+  "column_break_4",
+  "used_company",
+  "used_space",
+  "active_users",
+  "space_usage_details_section",
+  "private_files_size",
+  "public_files_size",
+  "column_break_11",
+  "backup_files_size",
+  "database_details_section",
+  "db_space_quota",
+  "column_break_15",
+  "used_db_space",
+  "extra_module",
+  "payroll",
+  "loan",
+  "hr",
+  "column_break_21",
+  "project",
+  "crm",
+  "care",
+  "monitor",
+  "warehouse_limit",
+  "rma"
+ ],
+ "fields": [
+  {
+   "fieldname": "company",
+   "fieldtype": "Data",
+   "label": "Company Allowed",
+   "read_only": 1
+  },
+  {
+   "fieldname": "space",
+   "fieldtype": "Data",
+   "label": "Files Space Allowed (MB)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "users_limit",
+   "fieldtype": "Data",
+   "label": "Users Allowed",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "used_company",
+   "fieldtype": "Data",
+   "label": "Active Company",
+   "read_only": 1
+  },
+  {
+   "fieldname": "used_space",
+   "fieldtype": "Data",
+   "label": "Used Space (MB)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "active_users",
+   "fieldtype": "Data",
+   "label": "Active Users",
+   "read_only": 1
+  },
+  {
+   "fieldname": "space_usage_details_section",
+   "fieldtype": "Section Break",
+   "label": "Space Usage Details"
+  },
+  {
+   "fieldname": "private_files_size",
+   "fieldtype": "Int",
+   "label": "Private Files (MB)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "public_files_size",
+   "fieldtype": "Int",
+   "label": "Public Files (MB)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_11",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "backup_files_size",
+   "fieldtype": "Int",
+   "label": "Backup Files (MB)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "database_details_section",
+   "fieldtype": "Section Break",
+   "label": "Database Details"
+  },
+  {
+   "default": "0",
+   "fieldname": "db_space_quota",
+   "fieldtype": "Data",
+   "label": "Database Space Allowed (MB)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_15",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "used_db_space",
+   "fieldtype": "Data",
+   "label": "Database Size (MB)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "extra_module",
+   "fieldtype": "Section Break",
+   "label": "Extra Module"
+  },
+  {
+   "fieldname": "payroll",
+   "fieldtype": "Data",
+   "label": "Payroll"
+  },
+  {
+   "fieldname": "loan",
+   "fieldtype": "Data",
+   "label": "Loan"
+  },
+  {
+   "fieldname": "hr",
+   "fieldtype": "Data",
+   "label": "Hrm"
+  },
+  {
+   "fieldname": "column_break_21",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "project",
+   "fieldtype": "Data",
+   "label": "Project"
+  },
+  {
+   "fieldname": "crm",
+   "fieldtype": "Data",
+   "label": "Crm"
+  },
+  {
+   "fieldname": "care",
+   "fieldtype": "Data",
+   "label": "Care Desk"
+  },
+  {
+   "fieldname": "monitor",
+   "fieldtype": "Section Break",
+   "label": "Monitor Others"
+  },
+  {
+   "fieldname": "rma",
+   "fieldtype": "Data",
+   "label": "Rma"
+  },
+  {
+   "fieldname": "warehouse_limit",
+   "fieldtype": "Data",
+   "label": "Warehouse",
+   "read_only": 1
+  }
+ ],
+ "issingle": 1,
+ "links": [],
+ "modified": "2021-11-29 04:07:50.301752",
+ "modified_by": "Administrator",
+ "module": "Sploy",
+ "name": "VPanel",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "read": 1,
+   "role": "System Manager"
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

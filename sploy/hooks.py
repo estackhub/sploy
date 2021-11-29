@@ -56,6 +56,8 @@ app_license = "MIT"
 # Installation
 # ------------
 
+before_install = "sploy.ploy.install.before_install"
+
 # before_install = "sploy.install.before_install"
 # after_install = "sploy.install.after_install"
 
@@ -97,6 +99,47 @@ app_license = "MIT"
 #	}
 # }
 
+on_login = 'sploy.events.auth.successful_login'
+
+doc_events = {
+  'User': {
+    'validate': 'sploy.sploy.api.allot.user_limit',
+    'on_update': 'sploy.sploy.api.allot.user_limit'
+	},
+  'Company': {
+    'validate':'sploy.sploy.api.allot.company_limit',
+    'on_update':'sploy.sploy.api.allot.company_limit'
+	},
+	'Warehouse': {
+    'validate':'sploy.sploy.api.allot.warehouse_limit',
+    'on_update':'sploy.sploy.api.allot.warehouse_limit'
+	},
+  ('Stock Entry', 'Purchase Invoice', 'Payment', 'Journal Entry'):{
+	  'on_submit' :'sploy.sploy.api.allot.db_space_limit'
+	  },
+  'File': {
+    'validate': 'sploy.sploy.api.allot.files_space_limit'
+	},
+  ('Attendance','Expense Claim', 'Attendance Request', 'Employee Checkin','Leave Application', 'Shift Request', 'Shift Assignment', 'Employee Onboarding','Employee Promotion','Vehicle Log', 'Driver','Vehicle'): {
+	  'validate': 'sploy.sploy.api.allot.hrm_status' 
+	  },
+  ('Loan Application', 'Loan', 'Loan Disbursement', 'Loan Repayment', 'Loan Write Off'): {
+	  'validate': 'sploy.sploy.api.allot.loan_status'
+	  },
+	('Lead','Opportunity','Contract','Appointment','Newsletter','Campaign','Email Campaign','Social Media Post'): {
+	  'validate': 'sploy.sploy.api.allot.crm_status'
+	  },
+  ('Salary Component','Salary Structure','Salary Structure Assignment','Payroll Entry','Salary Slip','Additional Salary','Retention Bonus','Employee Incentive','Employee Benefit Application','Employee Benefit Claim') : {
+	  'validate': 'sploy.sploy.api.allot.payroll_status'
+  },
+  ('Project', 'Task', 'Project Template', 'Project Type', 'Timesheet', 'Activity Cost', 'Activity Type') : {
+	  'validate': 'sploy.sploy.api.allot.project_status'
+  },
+  ('Issue', 'Issue Type', 'Warranty Claim', 'Serial No', 'Service Level Agreement', 'Maintenance Schedule', 'Maintenance Visit') : {
+	  'validate': 'sploy.sploy.api.allot.care_status'
+  }
+}
+
 # Scheduled Tasks
 # ---------------
 
@@ -117,6 +160,12 @@ app_license = "MIT"
 # 		"sploy.tasks.monthly"
 # 	]
 # }
+
+scheduler_events = {
+	"daily": [
+		"sploy.ploy.tasks.daily"
+	]
+}
 
 # Testing
 # -------
