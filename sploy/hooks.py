@@ -115,28 +115,36 @@ doc_events = {
     'on_update':'sploy.sploy.api.allot.warehouse_limit'
 	},
   ('Stock Entry', 'Purchase Invoice', 'Payment', 'Journal Entry'):{
+	  'validate':'sploy.sploy.api.allot.db_space_limit',
 	  'on_submit' :'sploy.sploy.api.allot.db_space_limit'
 	  },
   'File': {
-    'validate': 'sploy.sploy.api.allot.files_space_limit'
+    'validate': 'sploy.sploy.api.allot.files_space_limit',
+	"on_update": "sploy.sploy.api.allot.files_space_limit",
 	},
   ('Attendance','Expense Claim', 'Attendance Request', 'Employee Checkin','Leave Application', 'Shift Request', 'Shift Assignment', 'Employee Onboarding','Employee Promotion','Vehicle Log', 'Driver','Vehicle'): {
-	  'validate': 'sploy.sploy.api.allot.hrm_status' 
+	  'validate': 'sploy.sploy.api.allot.hrm_status',
+	  'on_submit' :'sploy.sploy.api.allot.hrm_status' 
 	  },
   ('Loan Application', 'Loan', 'Loan Disbursement', 'Loan Repayment', 'Loan Write Off'): {
-	  'validate': 'sploy.sploy.api.allot.loan_status'
+	  'validate': 'sploy.sploy.api.allot.loan_status',
+	  'on_submit' :'sploy.sploy.api.allot.loan_status'
 	  },
 	('Lead','Opportunity','Contract','Appointment','Newsletter','Campaign','Email Campaign','Social Media Post'): {
-	  'validate': 'sploy.sploy.api.allot.crm_status'
+	  'validate': 'sploy.sploy.api.allot.crm_status',
+	  'on_submit' :'sploy.sploy.api.allot.crm_status'
 	  },
   ('Salary Component','Salary Structure','Salary Structure Assignment','Payroll Entry','Salary Slip','Additional Salary','Retention Bonus','Employee Incentive','Employee Benefit Application','Employee Benefit Claim') : {
-	  'validate': 'sploy.sploy.api.allot.payroll_status'
+	  'validate': 'sploy.sploy.api.allot.payroll_status',
+	  'on_submit' :'sploy.sploy.api.allot.payroll_status'
   },
   ('Project', 'Task', 'Project Template', 'Project Type', 'Timesheet', 'Activity Cost', 'Activity Type') : {
-	  'validate': 'sploy.sploy.api.allot.project_status'
+	  'validate': 'sploy.sploy.api.allot.project_status',
+	  'on_submit' :'sploy.sploy.api.allot.project_status'
   },
   ('Issue', 'Issue Type', 'Warranty Claim', 'Serial No', 'Service Level Agreement', 'Maintenance Schedule', 'Maintenance Visit') : {
-	  'validate': 'sploy.sploy.api.allot.care_status'
+	  'validate': 'sploy.sploy.api.allot.care_status',
+	  'on_submit' :'sploy.sploy.api.allot.care_status'
   }
 }
 

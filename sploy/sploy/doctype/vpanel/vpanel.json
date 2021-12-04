@@ -31,7 +31,10 @@
   "care",
   "monitor",
   "warehouse_limit",
-  "rma"
+  "used_warehouse",
+  "column_break_28",
+  "rma_status",
+  "rec_valid_till"
  ],
  "fields": [
   {
@@ -169,20 +172,34 @@
    "label": "Monitor Others"
   },
   {
-   "fieldname": "rma",
-   "fieldtype": "Data",
-   "label": "Rma"
-  },
-  {
    "fieldname": "warehouse_limit",
    "fieldtype": "Data",
    "label": "Warehouse",
    "read_only": 1
+  },
+  {
+   "fieldname": "rma_status",
+   "fieldtype": "Data",
+   "label": "RM App"
+  },
+  {
+   "fieldname": "rec_valid_till",
+   "fieldtype": "Data",
+   "label": "RMA Subscription"
+  },
+  {
+   "fieldname": "used_warehouse",
+   "fieldtype": "Data",
+   "label": "Active Warehouse"
+  },
+  {
+   "fieldname": "column_break_28",
+   "fieldtype": "Column Break"
   }
  ],
  "issingle": 1,
  "links": [],
- "modified": "2021-11-29 04:07:50.301752",
+ "modified": "2021-12-01 01:47:19.276280",
  "modified_by": "Administrator",
  "module": "Sploy",
  "name": "VPanel",

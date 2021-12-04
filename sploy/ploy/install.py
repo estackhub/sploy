@@ -39,7 +39,7 @@ def before_install():
     'valid_till': trials,
     'status': 'freemium',
     'trial_ends': trials,
-    'warehouse': 2,
+    'warehouse_limit': 2,
     'used_warehouse': 1,
     'loan':trials,
     'payroll': trials,
@@ -47,7 +47,8 @@ def before_install():
     'crm': trials,
     'project': trials,
     'care': trials,
-    'rma_status': 'freemium'
+    'rma_status': 'freemium',
+    'rec_valid_till': trials
   }
   with open(frappe.get_site_path('allot.json'), 'w') as outfile:
     json.dump(data, outfile, indent= 2)
